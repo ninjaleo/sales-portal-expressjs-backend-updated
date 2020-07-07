@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const routes = require('./routes')
 
-const Note = require('./db/models/note.js').Note;
+//const Note = require('./db/models/note.js').Note;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
