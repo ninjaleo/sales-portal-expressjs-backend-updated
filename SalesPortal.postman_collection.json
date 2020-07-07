@@ -1,0 +1,195 @@
+{
+	"id": "be31b431-11e9-7b0a-d02e-becc708f78c9",
+	"name": "SalesPortal",
+	"description": "",
+	"order": [
+		"6a5a1e09-e32a-a562-17dd-c368900019ca",
+		"c2989369-80cc-cfbe-9094-86f86642f068",
+		"260d8763-68ff-6bcb-e272-65911bb0b0e9",
+		"ebfedc55-a43f-c714-542f-9a8681013ddc",
+		"8bfe3c33-6f3a-d467-1996-e60b844e18f2"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1593959859588,
+	"owner": "9481542",
+	"public": false,
+	"requests": [
+		{
+			"id": "260d8763-68ff-6bcb-e272-65911bb0b0e9",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:5000/createQuote",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "be31b431-11e9-7b0a-d02e-becc708f78c9",
+			"data": [],
+			"dataMode": "raw",
+			"name": "CreateQuote[Save Quote]",
+			"description": "For the input parameters the quote will be calculated and written to the db",
+			"descriptionFormat": "html",
+			"time": 1594076742907,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{ \"tenure\" : \"12\", \r\n \"loanAmount\" : \"10000\" ,\r\n \"userEmail\" : \"velandhi@gmail.com\",\r\n \"annualIncome\": \"120000\"}"
+		},
+		{
+			"id": "6a5a1e09-e32a-a562-17dd-c368900019ca",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:5000/signup",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1594071575397,
+			"name": "SignUp",
+			"description": "SalesPortal - SignUp URL",
+			"collectionId": "be31b431-11e9-7b0a-d02e-becc708f78c9",
+			"responses": [],
+			"rawModeData": "{\r\n\"email\": \"velandhi@gmail.com\",\r\n\"password\": \"Dummy@123\",\r\n\"confirmPassword\": \"Dummy@123\",\r\n\"username\": \"Velandhi\",\r\n\"address\": 0,\r\n\"addresses\": [\r\n{ \"addressLine1\": \"FLAT 6\",\r\n\"addressLine2\": \"2 CHURCH STREET\",\r\n\"city\": \"HALIFAX\",\r\n\"region\": \"West Yorkshire\",\r\n\"zip\": \"HX1 1QY\",\r\n\"country\": \"Andorra\" }]\r\n}"
+		},
+		{
+			"id": "8bfe3c33-6f3a-d467-1996-e60b844e18f2",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:5000/user?email=sureshspartacus@gmail.com&password=Dummy@123",
+			"queryParams": [
+				{
+					"key": "email",
+					"value": "sureshspartacus@gmail.com",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "Dummy@123",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "be31b431-11e9-7b0a-d02e-becc708f78c9",
+			"data": [],
+			"dataMode": "raw",
+			"name": "GetUser",
+			"description": "Email and password are sent in as query params",
+			"descriptionFormat": "html",
+			"time": 1594076908388,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\r\n\"email\": \"velandhi@gmail.com\",\r\n\"password\": \"Dummy@123\",\r\n\"confirmPassword\": \"Dummy@123\",\r\n\"username\": \"Velandhi\",\r\n\"address\": 0,\r\n\"addresses\": [\r\n{ \"addressLine1\": \"FLAT 6\",\r\n\"addressLine2\": \"2 CHURCH STREET\",\r\n\"city\": \"HALIFAX\",\r\n\"region\": \"West Yorkshire\",\r\n\"zip\": \"HX1 1QY\",\r\n\"country\": \"Andorra\" }]\r\n}"
+		},
+		{
+			"id": "c2989369-80cc-cfbe-9094-86f86642f068",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:5000/getQuotes?userEmail=sureshspartacus@gmail.com",
+			"queryParams": [
+				{
+					"key": "userEmail",
+					"value": "sureshspartacus@gmail.com",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "be31b431-11e9-7b0a-d02e-becc708f78c9",
+			"data": [],
+			"dataMode": "raw",
+			"name": "GetQuotes",
+			"description": "To Get the existing quote details",
+			"descriptionFormat": "html",
+			"time": 1594076619469,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\r\n      \"email\": \"velandhi@gmail.com\",\r\n      \"password\": \"Dummy@123\",\r\n      \"confirmPassword\": \"Dummy@123\",\r\n      \"username\": \"Velandhi\",\r\n      \"address\": 0,\r\n      \"addresses\": [\r\n      { \"addressLine1\": \"FLAT 6\",\r\n      \"addressLine2\": \"2 CHURCH STREET\",\r\n      \"city\": \"HALIFAX\",\r\n      \"region\": \"West Yorkshire\",\r\n      \"zip\": \"HX1 1QY\",\r\n      \"country\": \"Andorra\" }]\r\n      }"
+		},
+		{
+			"id": "ebfedc55-a43f-c714-542f-9a8681013ddc",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:5000/login",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "be31b431-11e9-7b0a-d02e-becc708f78c9",
+			"data": [],
+			"dataMode": "raw",
+			"name": "UserLogin",
+			"description": "Email and Password are passed ina s request body.",
+			"descriptionFormat": "html",
+			"time": 1594076826939,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\r\n\"email\": \"velandhi@gmail.com\",\r\n\"password\": \"Dummy@123\"\r\n}"
+		}
+	]
+}
